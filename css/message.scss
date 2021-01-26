@@ -22,6 +22,11 @@
 	}
 }
 
+@mixin header-padding-right($padding, $condition:"") {
+	.items-header#{$condition} {
+		padding-right: $padding !important;
+	}
+}
 
 .tidy5e.sheet.actor.bugsheet-modified .list-layout:not(.favorites) {
 	.item {
@@ -37,6 +42,44 @@
 
 		h4 {
 			line-height: 30px;
+		}
+	}
+
+	.items-list.classic-controls {
+		&:not(.unlocked) {
+			&.inventory-list:not(.features-list):not(.spellbook-list) {
+				@include header-padding-right(69px);
+			}
+
+			&.features-list {
+				@include header-padding-right(53px, ":not(:first-child)");
+
+				@include header-padding-right(37px, ":first-child");
+			}
+
+			&.spellbook-list {
+				@include header-padding-right(69px, ":not(:first-child)");
+
+				@include header-padding-right(53px, ":first-child");
+			}
+		}
+
+		&.unlocked {
+			&.inventory-list:not(.features-list):not(.spellbook-list) {
+				@include header-padding-right(85px);
+			}
+
+			&.features-list {
+				@include header-padding-right(69px, ":not(:first-child)");
+
+				@include header-padding-right(53px, ":first-child");
+			}
+
+			&.spellbook-list {
+				@include header-padding-right(85px, ":not(:first-child)");
+
+				@include header-padding-right(69px, ":first-child");
+			}
 		}
 	}
 }
