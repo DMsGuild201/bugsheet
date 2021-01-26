@@ -3,7 +3,7 @@ export const ModuleOptions = {
 };
 
 export class ModuleSettings {
-    static MODULE_NAME = 'bugvolution';
+    static MODULE_NAME = 'bugsheet';
 
 	static registerSettings() {
         game.settings.register(this.MODULE_NAME, ModuleOptions.LITE_MODE, this._buildBooleanConfig(ModuleOptions.LITE_MODE));
