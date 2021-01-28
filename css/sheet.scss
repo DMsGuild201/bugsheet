@@ -22,20 +22,51 @@
 	}
 }
 
-.tidy5e.sheet.actor.bugsheet-modified .list-layout:not(.favorites) {
+.tidy5e.sheet.actor.bugsheet-modified {
+	.skill, .skill-name {
+		font-size: 13px !important;
+	}
+
+	.skill {
+		height: unset !important;
+		padding: 3px 4px !important;
+	}
+
+	.traits {
+		.form-group {
+			padding: 1px 4px;
+			
+			label, li {
+				font-size: 13px !important;
+			}
+		}
+	}
+}
+
+@mixin item-size($size) {
 	.item {
 		.item-name {
 			font-size: 13px !important;
 
 			.item-image {
-				height: 28px !important;
-				flex: 0 0 28px !important;
-				margin-right: 6px !important;
+				height: $size !important;
+				flex: 0 0 $size !important;
+				margin-right: 5px !important;
 			}
 		}
 
 		h4 {
-			line-height: 30px;
+			line-height: $size;
 		}
+	}	
+}
+
+.tidy5e.sheet.actor.bugsheet-modified .list-layout {
+	&:not(.favorites) {
+		@include item-size(30px)
+	}
+
+	&.favorites {
+		@include item-size(22px)
 	}
 }
