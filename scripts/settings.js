@@ -2,9 +2,9 @@ export const ModuleOptions = {
 	LITE_MODE: 'litemode',
 	ANIMATION_DURATION: 'animation-duration',
 	ANIMATION_DURATION_CHOICES: {
+		Default: 'Default',
 		None: 'None',
 		Short: 'Short',
-		Medium: 'Medium',
 		Long: 'Long'
 	}
 };
@@ -17,7 +17,7 @@ export class ModuleSettings {
 		game.settings.register(
 			this.MODULE_NAME,
 			ModuleOptions.ANIMATION_DURATION,
-			this._buildChoiceConfig(ModuleOptions.ANIMATION_DURATION, ModuleOptions.ANIMATION_DURATION_CHOICES, 'MEDIUM')
+			this._buildChoiceConfig(ModuleOptions.ANIMATION_DURATION, ModuleOptions.ANIMATION_DURATION_CHOICES, ModuleOptions.ANIMATION_DURATION_CHOICES.Default)
 		);
 	}
 
@@ -35,7 +35,6 @@ export class ModuleSettings {
 
 	/** @private */
 	static _buildChoiceConfig(optionName, choices, defaultOption, config = {}) {
-		console.warn(choices);
 		const defaultConfig = {
 			scope: 'client',
 			config: true,
