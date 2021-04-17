@@ -1,4 +1,6 @@
 {
     "bugsheet.litemode-s": "Enable lite mode",
-    "bugsheet.litemode-l": "Keep the look of the Tidy sheet as default (smaller text and padding)."
+    "bugsheet.litemode-l": "Keep the look of the Tidy sheet as default (smaller text and padding).",
+    "bugsheet.animation-duration-s": "Change floating info card animation duration",
+    "bugsheet.animation-duration-l": "Medium is the default Tidy5e option. If you choose None, it's recommended you set the delay in Tidy5e setting to 1."
 }

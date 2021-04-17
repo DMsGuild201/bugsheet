@@ -5,6 +5,10 @@
 		h4 {
 			flex: 1 !important;
 		}
+
+		margin: 0 !important;
+		padding: 1px 0;
+		background-clip: content-box !important;
 	}
 
 	.item-detail:not(.item-charges) {
@@ -22,22 +26,26 @@
 	}
 }
 
-.tidy5e.sheet.actor.bugsheet-modified {
-	.skill, .skill-name {
-		font-size: 13px !important;
-	}
+.tidy5e.sheet.actor {
+	&.bugsheet-modified {
+		.skill,
+		.skill-name {
+			font-size: 13px !important;
+		}
 
-	.skill {
-		height: unset !important;
-		padding: 3px 4px !important;
-	}
+		.skill {
+			height: unset !important;
+			padding: 3px 4px !important;
+		}
 
-	.traits {
-		.form-group {
-			padding: 1px 4px;
-			
-			label, li {
-				font-size: 13px !important;
+		.traits {
+			.form-group {
+				padding: 1px 4px;
+
+				label,
+				li {
+					font-size: 13px !important;
+				}
 			}
 		}
 	}
@@ -58,15 +66,15 @@
 		h4 {
 			line-height: $size;
 		}
-	}	
+	}
 }
 
 .tidy5e.sheet.actor.bugsheet-modified .list-layout {
 	&:not(.favorites) {
-		@include item-size(30px)
+		@include item-size(30px);
 	}
 
 	&.favorites {
-		@include item-size(22px)
+		@include item-size(22px);
 	}
 }
